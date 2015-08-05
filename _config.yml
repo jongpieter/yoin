@@ -82,7 +82,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : yoin
+      short_name : channel-yoin
     livefyre :
       site_id : 123
     intensedebate :
