@@ -1,0 +1,24 @@
+#site-footer {
+  background: whitesmoke;
+  text-align: center;
+}
+#site-footer .hd-suptitle, #site-footer .card .card-suptitle, .card #site-footer .card-suptitle, #site-footer .prose table > thead > tr > th, .prose #site-footer table > thead > tr > th, #site-footer .feat-section-introduction table > thead > tr > th, .feat-section-introduction #site-footer table > thead > tr > th, #site-footer .page-prose table > thead > tr > th, .page-prose #site-footer table > thead > tr > th, #site-footer .set-section-prose table > thead > tr > th, .set-section-prose #site-footer table > thead > tr > th, #site-footer #hero-featured .slide-suptitle, #hero-featured #site-footer .slide-suptitle, #site-footer .page-suptitle, #site-footer .colophon-hd,
+#site-footer .meta-colophon, #site-footer .search-result-suptile, #site-footer .popover .popover-suptitle, .popover #site-footer .popover-suptitle {
+  margin-bottom: 1rem;
+}
+#site-footer .credits {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  opacity: 0.48;
+  font-weight: 400;
+}
+
+#site-elsewhere-nav .connect-menu {
+  margin: 0 0 1rem 0;
+  word-spacing: -0.26rem;
+}
+#site-elsewhere-nav .connect-menu li {
+  display: inline-block;
+  word-spacing: normal;
+  margin: 0 0.25rem;
+}
