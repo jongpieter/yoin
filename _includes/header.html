@@ -1,1 +1,52 @@
-{% include nav.html %}
+{% if page.header.image %}
+<section class="module module-header bg-dark bg-dark-50" data-background="{{ page.header.image }}">
+  <div class="container">
+    <!-- MODULE TITLE -->
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h1 class="module-title font-alt align-center">{{ page.title }}</h1>
+        {% if page.header.tagline %}
+        <div class="module-subtitle font-inc align-center">
+          {{ page.header.tagline }}
+        </div>
+        {% endif %}
+        {% if page.post %}
+        <div class="module-subtitle font-inc align-center">
+          <div class="post-meta font-inc">
+            By <a href="#">{{ page.author }}</a> | {{ page.date | date_to_long_string }} | {% for category in page.categories %}<a href="/categories.html#{{ category }}">{{ category }}</a> {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <!-- /MODULE TITLE -->
+  </div>
+</section >
+
+{% else %}
+
+<section class="module module-header-small bg-dark bg-dark-50">
+  <div class="container">
+    <!-- MODULE TITLE -->
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h2 class="module-title align-center font-alt">{{ page.title }}</h2>
+        {% if page.header.tagline %}
+        <div class="module-subtitle align-center font-inc">
+          {{ page.header.tagline }}
+        </div>
+        {% endif %}
+        {% if page.post %}
+        <div class="module-subtitle font-inc align-center">
+          <div class="post-meta font-inc">
+            By <a href="/author/{{ page.author }}">{{ page.author }}</a> | {{ page.date | date: '%Y-%m-%d' }} | {% for category in page.categories %}<a href="/categories.html#{{ category }}">{{ category }}</a>{% if forloop.last == false %},{% endif %} {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <!-- /MODULE TITLE -->
+  </div>
+</section>
+
+{% endif %}

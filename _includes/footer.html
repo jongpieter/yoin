@@ -1,18 +1,9 @@
-<footer id="site-footer" role="contentinfo">
-  <div class="row inner-row">
-    <nav id="site-elsewhere-nav" role="navigation">
-      <h2 class="hd-suptitle">Let's connect</h2>
-      <ul class="connect-menu">
-        <li class="feed"><a href="/rss.xml" title="Subscribe to our RSS feed"><span>RSS feed</span></a></li>
-        <li class="twitter"><a href="https://twitter.com/yoinio" title="Follow us on Twitter"><span>Twitter</span></a></li>
-        <li class="github"><a href="https://github.com/yoin" title="Follow us on GitHub"><span>GitHub</span></a></li>
-      </ul>
-    </nav>
-    <p class="credits">&copy; yoin.io • {{ site.time | date: '%Y' }}. All rights reserved.</p>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <p class="copyright font-inc m-b-0">&copy; {{ site.time | date: '%Y' }} <a href="index.html">{{ site.author.name }}</a>, All Rights Reserved.</p>
+      </div>
+    </div>
   </div>
 </footer>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/bootstrap.min.js"></script>

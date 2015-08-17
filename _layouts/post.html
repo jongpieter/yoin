@@ -4,4 +4,54 @@ theme :
 layout: default
 ---
 {% include JB/setup %}
-{% include themes/yoin/post.html %}
+<!-- HEADER -->
+{% include header.html %}
+<!-- /HEADER -->
+
+<!-- COMPONENTS -->
+<section class="module">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <!-- POST -->
+        <div class="post">
+          <div class="post-entry">
+            {{ content }}
+          </div>
+        </div>
+        <!-- /POST -->
+
+        <!-- PAGINATION -->
+        <div class="pagination font-inc text-uppercase">
+          {% if page.previous %}
+          <a href="{{ BASE_PATH }}{{ page.previous.url }}"><i class="fa fa-angle-left"></i> Prev</a>
+          {% endif %}
+          <a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">All posts</a>
+          {% if page.next %}
+          <a href="{{ BASE_PATH }}{{ page.next.url }}">Next <i class="fa fa-angle-right"></i></a>
+          {% endif %}
+        </div>
+        <!-- /PAGINATION -->
+
+        <!-- SHARING -->
+        <div class="post-sharing">
+            {% include JB/sharing %}
+        </div>
+        <!-- /SHARING -->
+
+        <!-- DIVIDER -->
+        <hr class="divider">
+        <!-- /DIVIDER -->
+
+        <!-- COMMENTS-->
+        <div class="comments">
+          <h4 class="comment-title font-alt">Comments</h4>
+          {% include JB/comments %}
+        </div>
+        <!-- /COMMENTS -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /COMPONENTS -->
+

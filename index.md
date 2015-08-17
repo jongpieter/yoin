@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Hello World!
 tagline: Supporting tagline
 ---
