@@ -628,8 +628,8 @@ coreos:
         RemainAfterExit=yes
         Type=oneshot
         [Install]
-        WantedBy=kubernetes-master.target
-        WantedBy=kubernetes-minion.target
+        WantedBy=kubernetes.master.target
+        WantedBy=kubernetes.node.target
 
     # Kubernetes Master on azure-prd-01
     - name: kubernetes.apiserver.service
