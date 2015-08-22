@@ -1,0 +1,80 @@
+---
+layout: page
+title: Blog
+---
+{% include JB/setup %}
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ '/archives' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+
+<!-- BLOG GRID -->
+<section class="module p-b-0">
+  <div class="container">
+    <div class="row multi-columns-row post-columns">
+
+      {% for post in paginator.posts %}
+      <!-- POST ITEM -->
+      <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="post">
+          <div class="post-thumbnail">
+            <a href="{{ post.url }}"><img src="{% if post.header.image %}{{ post.header.image }}{% else %}assets/images/no-img.jpg{% endif %}" alt=""></a>
+          </div>
+          <div class="post-header">
+            <h2 class="post-title font-alt"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <div class="post-meta font-inc">
+              {% assign author = site.data.people[post.author] %}
+              By <a href="{{ author.link }}">{{ author.name }}</a> | {{ post.date | date: "%B %e, %Y" }}
+            </div>
+          </div>
+          <div class="post-entry">
+            <p>{{ post.header.tagline }}</p>
+          </div>
+          <div class="post-more font-inc">
+            <a href="{{ post.url }}" class="more-link">Read more</a>
+          </div>
+        </div>
+      </div>
+      <!-- /POST ITEM -->
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+<!-- /BLOG GRID -->
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>

@@ -5,54 +5,60 @@ layout: default
 ---
 {% assign author = site.data.people[page.author] %}
 {% include JB/setup %}
-<!-- HEADER -->
-{% include header.html %}
-<!-- /HEADER -->
 
-<!-- COMPONENTS -->
-<section class="module module-small">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
-        <!-- POST -->
-        <div class="post">
-          <div class="post-entry">
-            {{ content }}
+<!-- WRAPPER -->
+<div class="wrapper">
+
+  <!-- HEADER -->
+  {% include header.html %}
+  <!-- /HEADER -->
+
+  <!-- COMPONENTS -->
+  <section class="module module-small">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <!-- POST -->
+          <div class="post">
+            <div class="post-entry">
+              {{ content }}
+            </div>
           </div>
-        </div>
-        <!-- /POST -->
+          <!-- /POST -->
 
-        <!-- PAGINATION -->
-        <div class="pagination font-inc text-uppercase">
-          {% if page.previous %}
-          <a href="{{ BASE_PATH }}{{ page.previous.url }}"><i class="fa fa-angle-left"></i> Prev</a>
-          {% endif %}
-          <a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">All posts</a>
-          {% if page.next %}
-          <a href="{{ BASE_PATH }}{{ page.next.url }}">Next <i class="fa fa-angle-right"></i></a>
-          {% endif %}
-        </div>
-        <!-- /PAGINATION -->
+          <!-- PAGINATION -->
+          <div class="pagination font-inc text-uppercase">
+            {% if page.previous %}
+            <a href="{{ BASE_PATH }}{{ page.previous.url }}"><i class="fa fa-angle-left"></i> Prev</a>
+            {% endif %}
+            <a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">All posts</a>
+            {% if page.next %}
+            <a href="{{ BASE_PATH }}{{ page.next.url }}">Next <i class="fa fa-angle-right"></i></a>
+            {% endif %}
+          </div>
+          <!-- /PAGINATION -->
 
-        <!-- SHARING -->
-        <div class="post-sharing">
-            {% include JB/sharing %}
-        </div>
-        <!-- /SHARING -->
+          <!-- SHARING -->
+          <div class="post-sharing">
+              {% include JB/sharing %}
+          </div>
+          <!-- /SHARING -->
 
-        <!-- DIVIDER -->
-        <hr class="divider">
-        <!-- /DIVIDER -->
+          <!-- DIVIDER -->
+          <hr class="divider">
+          <!-- /DIVIDER -->
 
-        <!-- COMMENTS-->
-        <div class="comments">
-          <h4 class="comment-title font-alt">Comments</h4>
-          {% include JB/comments %}
+          <!-- COMMENTS-->
+          <div class="comments">
+            <h4 class="comment-title font-alt">Comments</h4>
+            {% include JB/comments %}
+          </div>
+          <!-- /COMMENTS -->
         </div>
-        <!-- /COMMENTS -->
       </div>
     </div>
-  </div>
-</section>
-<!-- /COMPONENTS -->
+  </section>
+  <!-- /COMPONENTS -->
 
+</div>
+<!-- /WRAPPER -->

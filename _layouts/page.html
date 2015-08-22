@@ -4,18 +4,17 @@ theme :
 layout: default
 ---
 {% include JB/setup %}
-<!-- HEADER -->
-{% include header.html %}
-<!-- /HEADER -->
 
-<!-- COMPONENTS -->
-<section class="module">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
-        {{ content }}
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /COMPONENTS -->
+<!-- WRAPPER -->
+<div class="wrapper">
+
+  <!-- HEADER -->
+  {% include header.html %}
+  <!-- /HEADER -->
+
+  <!-- COMPONENTS -->
+  {{ content }}
+  <!-- /COMPONENTS -->
+
+</div>
+<!-- /WRAPPER -->
