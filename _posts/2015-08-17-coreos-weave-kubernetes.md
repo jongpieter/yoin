@@ -3,8 +3,7 @@ layout: post
 header:
   tagline: "Docker, CoreOS, Weave, Kubernetes Multi-Host/Cloud Cluster"
   image: https://pieterjong.files.wordpress.com/2015/07/new-virtual-machine.png
-post:
-  author: Pieter Jong
+author: pjong
 categories: [infrastructure]
 tags: [infrastructure, azure]
 ---

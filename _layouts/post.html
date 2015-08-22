@@ -3,6 +3,7 @@ theme :
   name : yoin
 layout: default
 ---
+{% assign author = site.data.people[page.author] %}
 {% include JB/setup %}
 <!-- HEADER -->
 {% include header.html %}

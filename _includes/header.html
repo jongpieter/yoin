@@ -10,10 +10,10 @@
           {{ page.header.tagline }}
         </div>
         {% endif %}
-        {% if page.post %}
+        {% if page.author %}
         <div class="module-subtitle font-inc align-center">
           <div class="post-meta font-inc">
-            By <a href="#">{{ page.author }}</a> | {{ page.date | date_to_long_string }} | {% for category in page.categories %}<a href="/categories.html#{{ category }}">{{ category }}</a> {% endfor %}
+              By <a href="{{ author.link }}">{{ author.name }}</a> | {{ page.date | date_to_long_string }} | {% for category in page.categories %}<a href="/categories.html#{{ category }}">{{ category }}</a> {% endfor %}
           </div>
         </div>
         {% endif %}
@@ -36,7 +36,7 @@
           {{ page.header.tagline }}
         </div>
         {% endif %}
-        {% if page.post %}
+        {% if page.author %}
         <div class="module-subtitle font-inc align-center">
           <div class="post-meta font-inc">
             By <a href="/author/{{ page.author }}">{{ page.author }}</a> | {{ page.date | date: '%Y-%m-%d' }} | {% for category in page.categories %}<a href="/categories.html#{{ category }}">{{ category }}</a>{% if forloop.last == false %},{% endif %} {% endfor %}

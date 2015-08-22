@@ -32,3 +32,110 @@ a:visited {
   padding: 120px 0 0px;
 }
 
+/* Call to action */
+
+.cta-blocks-section {
+  text-align: center;
+}
+.cta-blocks-section .cta-block {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+  margin-bottom: 2rem;
+}
+.cta-blocks-section .cta-block:before, .cta-blocks-section .cta-block:after {
+  content: '';
+  display: table;
+}
+.cta-blocks-section .cta-block:after {
+  clear: both;
+}
+.cta-blocks-section .cta-block:last-child {
+  margin-right: 0%;
+}
+.cta-blocks-section .cta-block-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+@media (min-width: 768px) {
+  .cta-blocks-section .cta-block-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.cta-blocks-section .bttn-wrapper {
+  margin-top: -0.5rem;
+}
+@media (min-width: 544px) {
+  .cta-blocks-section {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .cta-blocks-section {
+    padding: 0;
+  }
+  .cta-blocks-section .cta-block {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .cta-blocks-section .cta-block:before, .cta-blocks-section .cta-block:after {
+    content: '';
+    display: table;
+  }
+  .cta-blocks-section .cta-block:after {
+    clear: both;
+  }
+  .cta-blocks-section .cta-block:nth-of-type(2n) {
+    margin-right: 0%;
+    float: right;
+  }
+  .cta-blocks-section .cta-block:nth-of-type(2n + 1) {
+    clear: both;
+  }
+  .cta-blocks-section .bttn-wrapper {
+    margin-top: -0.75rem;
+  }
+}
+@media (min-width: 992px) {
+  .cta-blocks-section .cta-block {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 31.33333%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .cta-blocks-section .cta-block:before, .cta-blocks-section .cta-block:after {
+    content: '';
+    display: table;
+  }
+  .cta-blocks-section .cta-block:after {
+    clear: both;
+  }
+  .cta-blocks-section .cta-block:nth-of-type(2n) {
+    margin-right: 3%;
+    float: left;
+  }
+  .cta-blocks-section .cta-block:nth-of-type(2n + 1) {
+    clear: none;
+  }
+  .cta-blocks-section .cta-block:nth-of-type(3n) {
+    margin-right: 0%;
+    float: right;
+  }
+  .cta-blocks-section .cta-block:nth-of-type(3n + 1) {
+    clear: both;
+  }
+}
+

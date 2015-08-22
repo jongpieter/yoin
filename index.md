@@ -1,46 +1,41 @@
 ---
 layout: home
-title: Hello World!
-tagline: Supporting tagline
+title: yoin.io
+tagline: Welcome to yoin.io
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+<div class="container">
+  <div class="row align-center">
+    <h1>Center</h1>
+    <p>Welcome to yoin.io</p>
+  </div>
+</div>
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+<!-- cta-blocks-section -->
+<div class="cta-blocks-section align-center">
+  <section class="cta-block">
+    <h1 class="cta-block-title">Our Projects</h1>
+    <div class="prose">
+      <p>Big or small, our projects are always&nbsp;impactful.</p>
+      <a class="btn btn-g btn-circle" href="/projects">View our projects<i class="fa fa-angle-right"></i></a>
+    </div>
+  </section>
+  <section class="cta-block">
+    <h1 class="cta-block-title">On the Blog</h1>
+    <div class="prose">
+      <p>Read about our latest work and&nbsp;events.</p>
+      <a class="btn btn-g btn-circle" href="/blog">View our projects<i class="fa fa-angle-right"></i></a>
+    </div>
+  </section>
+  <section class="cta-block">
+    <h1 class="cta-block-title">Let’s talk</h1>
+    <div class="prose">
+      <p>Start a conversation with us on&nbsp;Twitter.</p>
+      <a class="btn btn-g btn-circle" href="https://twitter.com/yoinnl" title="follow us on Twitter">@yoinnl <i class="fa fa-twitter"></i></a>
+    </div>
+  </section>
+</div>
+<!-- cta-blocks-section -->
 
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
-
+        
